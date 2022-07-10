@@ -1,0 +1,254 @@
+:root {
+  --dark: #111;
+  --icon: #00000080;
+  --darker: #464748;
+  --darkest: #464646;
+  --gray: #d2d2d2d2;
+  --light: #eee;
+  --yellow: #fff700;
+  --green: rgb(13, 136, 13);
+  --lime: #0f0;
+  --blue: #00ff004d;
+  --red: #dc1414;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark);
+}
+.header-content {
+  z-index: 10;
+  margin-bottom: 20px;
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--green);
+  margin-bottom: 2rem;
+  margin: 0 auto;
+}
+
+#new-task-form {
+  display: flex;
+  position: relative;
+}
+
+.textarea-counter {
+  position: absolute;
+  color: var(--green);
+  top: -30px;
+  left: 17px;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input {
+  box-shadow: 0 0 0 2px var(--light), 0 0 20px var(--light);
+  flex: 1 1 0%;
+  background-color: var(--darker);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+
+#new-task-input:focus {
+  box-shadow: 0 0 0 2px var(--green), 0 0 10px var(--green);
+}
+#new-task-input::placeholder {
+  color: var(--light);
+}
+
+.hop {
+  top: -17px;
+  left: 17px;
+}
+
+#new-task-submit {
+  box-shadow: 0 0 0 2px var(--light), 0 0 20px var(--light);
+  background-color: var(--darker);
+  border-radius: 15px;
+  padding: 15px;
+  color: var(--green);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-task-submit:hover {
+  color: var(--light);
+}
+
+#new-task-submit:active {
+  opacity: 0.6;
+  box-shadow: 0 0 0 2px var(--green), 0 0 10px var(--green);
+}
+
+main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.task-list {
+  padding: 1rem;
+  border: 1px solid var(--dark);
+  border: none;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--darkest);
+  box-shadow: 0 0 0 2px var(--light), 0 0 8px var(--light);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+  color: var(--light);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+  margin-left: 25px;
+  margin-top: 2px;
+}
+
+#tasks .task .content .text:not(:read-only) {
+  color: var(--yellow);
+}
+
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+button i {
+  cursor: pointer;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0 0 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.task .actions button:hover {
+  color: var(--light);
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  margin-top: 2px;
+  background: var(--yellow);
+  border-radius: 4px;
+}
+
+.task .actions .delete {
+  margin-top: 2px;
+  margin-right: 4px;
+  background: var(--red);
+  border-radius: 4px;
+}
+
+.task .actions .delete i {
+  color: #fff;
+}
+
+.task .actions .edit i {
+  color: var(--dark);
+}
+
+.no-tasks p {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-left: 310px;
+  margin-top: 300px;
+  color: var(--green);
+  font-size: 1.2rem;
+  background: transparent;
+}
+
+.no-tasks img {
+  display: flex;
+  position: absolute;
+  margin-left: 250px;
+  width: 300px;
+}
+
+.done-style {
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.label-input {
+  position: absolute;
+  transform: scale(0);
+}
+
+.label-input:checked ~ .checkbox {
+  transform: rotate(45deg);
+  width: 15px;
+  margin-left: 9px;
+  border-color: var(--lime);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+  margin-top: -2px;
+}
+.checkbox {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 3px solid var(--light);
+  border-radius: 6px;
+  transition: all 0.4s;
+}
+.checked-text {
+  text-decoration: line-through;
+}
