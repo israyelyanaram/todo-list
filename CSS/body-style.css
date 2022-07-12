@@ -36,12 +36,12 @@ i:hover {
 .body-style .row div {
     font-size: 1em;
     white-space: nowrap;
-    animation: animate1 80s linear infinite;
-    animation-delay: -80s;
+    animation: animate1 160s linear infinite;
+    animation-delay: -160s;
 }
 .body-style .row div:nth-child(2) {
-    animation: animate2 80s linear infinite;
-    animation-delay: -40s;
+    animation: animate2 160s linear infinite;
+    animation-delay: -80s;
 }
 
 @keyframes animate1 {
@@ -64,12 +64,12 @@ i:hover {
 .body-style .row:nth-child(even) div {
     font-size: 1em;
     white-space: nowrap;
-    animation: animate3 80s linear infinite;
-    animation-delay: -80s;
+    animation: animate3 160s linear infinite;
+    animation-delay: -160s;
 }
 .body-style .row:nth-child(even) div:nth-child(2) {
-    animation: animate4 80s linear infinite;
-    animation-delay: -40s;
+    animation: animate4 160s linear infinite;
+    animation-delay: -80s;
 }
 
 @keyframes animate3 {
