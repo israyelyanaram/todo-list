@@ -20,8 +20,6 @@ if (isDarkMode) {
   setLight();
 }
 
-
-
 function creating(task) {
   const task_el = document.createElement("div");
   task_el.classList.add("task");
@@ -163,6 +161,7 @@ function creating(task) {
             `;
   }
 }
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -207,8 +206,6 @@ function renderTodos() {
   nothingToDo();
 }
 renderTodos();
-
-
 
 toggle.addEventListener("click", () => {
   if (toggle.checked) {

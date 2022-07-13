@@ -41,7 +41,7 @@ for(let i = 0; i < 2; i++){
 }
 
 let nothing2 = "";
-for(let i = 0;i < 30; i++){
+for(let i = 0; i < 30; i++){
   nothing2 = nothing2 + createdhtml;
   $bodyStyle.html(nothing2);
 }
